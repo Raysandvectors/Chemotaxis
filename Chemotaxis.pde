@@ -10,7 +10,7 @@ int p;
  	size(500,500);
  frameRate(10);
  cry = new Jumper();
- crabs = new Jumper[3000];
+ crabs = new Jumper[100000];
  for(int i = 0; i < crabs.length; i++)
   {
     crabs[i] = new Jumper();
@@ -23,6 +23,9 @@ int p;
    stroke((float)(Math.random()*255),(float)(Math.random()*255),(float)(Math.random()*255));
    strokeWeight(3);
    background(0);
+   fill(255);
+   textSize(24);
+   text("frame rate: " + frameRate, 210, 400);
    for(int i=0; i<crabs.length; i++)
   {
     crabs[i].jump();
